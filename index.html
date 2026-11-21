@@ -2,7 +2,7 @@
 <html lang="tr"><head><meta charset="utf-8"><meta name="theme-color" content="#0a1017">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Kantin Yemek Takibi</title>
-<link rel="icon" id="ic">
+<link rel="icon" href="icon-192.png"><link rel="manifest" href="manifest.json"><link rel="apple-touch-icon" href="icon-192.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes">
 <style>
 :root{--bg:#0e141b;--card:#17212c;--tx:#e6ecf2;--mut:#8a9bad;--pri:#5b9bd5;--prit:#07111b;--red:#e5484d;--ok:#3fb27f;--ln:#243242;--sh:0 4px 14px #0004;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}html{scroll-padding-top:env(safe-area-inset-top,0px)}
@@ -168,5 +168,5 @@ function vHesap(){
  <button class="fin" onclick="endDay()">✓ Günü bitir ve geçmişe kaydet</button>`;
 }
 render();
-try{$("#ic").href=document.querySelector("header img").src}catch(e){}
+if('serviceWorker' in navigator)addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));
 </script></body></html>
